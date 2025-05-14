@@ -1,0 +1,6 @@
+@PromptHub_HostAddress = http://localhost:5129
+
+GET {{PromptHub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
