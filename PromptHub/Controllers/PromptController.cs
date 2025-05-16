@@ -41,7 +41,8 @@ namespace PromptHub.Controllers
             var prompt = new Prompt
             {
                 Title = dto.Title,
-                Content = dto.Content
+                Content = dto.Content,
+                Tag = dto.Tag
             };
             _context.Prompts.Add(prompt);
             await _context.SaveChangesAsync();
