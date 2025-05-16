@@ -1,18 +1,17 @@
-import './App.css'
-import Navbar from './components/Navbar'
-import HomePage from './Pages/HomePage'
-import FetchPrompts from './components/FetchPrompts';
+import "./App.css";
+import Navbar from "./components/Navbar";
+import HomePage from "./Pages/HomePage";
+import PromptsPage from "./Pages/PromptsPage";
+
 
 function App() {
-
-
   return (
     <>
       <Navbar />
       <HomePage />
-      <FetchPrompts />
+      <PromptsPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
