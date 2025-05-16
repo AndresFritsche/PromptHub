@@ -34,7 +34,7 @@ namespace PromptHub.Controllers
             return Ok(prompt);
         }
 
-        [HttpPost]
+        [HttpPost("create")]
 
         public async Task<ActionResult<Prompt>> CreatePrompt(PromptDto dto)
         {
