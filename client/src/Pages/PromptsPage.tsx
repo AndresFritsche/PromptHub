@@ -1,10 +1,12 @@
-import FetchPrompts from "../components/Prompt"
+import Navbar from "../components/Navbar";
+import FetchPrompts from "../components/Prompt";
 
 const PromptsPage = () => {
   return (
     <>
-        <FetchPrompts />
+      <Navbar />
+      <FetchPrompts />
     </>
-  )
-}
-export default PromptsPage
+  );
+};
+export default PromptsPage;
