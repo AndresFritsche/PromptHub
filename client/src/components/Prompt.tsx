@@ -28,7 +28,7 @@ const FetchPrompts = () => {
   }, []);
 
   return (
-    <section className="flex flex-col-2 p-8 m-6 gap-6">
+    <section className="grid grid-cols-2 p-20 m-20 gap-6">
       {prompts.map((prompt, index) => (
         <div
           key={index}
