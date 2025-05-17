@@ -1,7 +1,6 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
 import HomePage from "./Pages/HomePage";
-import PromptsPage from "./Pages/PromptsPage";
 
 
 function App() {
@@ -9,7 +8,6 @@ function App() {
     <>
       <Navbar />
       <HomePage />
-      <PromptsPage />
     </>
   );
 }
