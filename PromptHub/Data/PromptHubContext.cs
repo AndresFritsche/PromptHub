@@ -8,5 +8,7 @@ namespace PromptHub.Data
         public PromptHubContext(DbContextOptions<PromptHubContext> options) : base(options) { }
 
         public DbSet<Prompt> Prompts { get; set; }
+
+        public DbSet<Users> Users { get; set; }
     }
 }
