@@ -4,11 +4,11 @@ const Navbar = () => {
   return (
     <nav className="flex justify-between items-center px-6 py-4 bg-white">
       <div className="flex items-center gap-">
-        <a href="/" className="flex items-center h-16">
+        <a href="/" className="flex  items-center h-12">
           <img
             src="../../src/assets/logo.png"
             alt="Logo"
-            className="h-64 ml-20 object-cover"
+            className="h-12 ml-20 object-cover"
           />
         </a>
       </div>
