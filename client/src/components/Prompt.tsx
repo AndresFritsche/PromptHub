@@ -29,12 +29,12 @@ const FetchPrompts = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols-2 p-20 m-20 gap-6">
+    <section className="grid grid-cols p-20 m-20 gap-6 w-1/2 mx-auto">
       
       {prompts.map((prompt, index) => (
         <div
           key={index}
-          className="bg-white w-full max-w-2xl rounded-2xl shadow-lg border border-gray-200 p-6 hover:shadow-xl transition-shadow duration-300"
+          className="bg-white max-w-xl rounded-2xl shadow-lg border border-gray-200 p-12 mx-auto hover:shadow-xl transition-shadow duration-300"
         >
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
             {prompt.title}
