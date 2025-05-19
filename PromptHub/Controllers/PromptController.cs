@@ -64,10 +64,10 @@ namespace PromptHub.Controllers
             return Ok(prompt);
         }
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Prompt>> DeletePropmt(int id)
+        public async Task<ActionResult<Prompt>> DeletePrompt(int id)
         {
             var prompt = await _context.Prompts.FirstOrDefaultAsync(p => p.Id == id);
-            _context.Prompts.Remove(prompt);
+            _context.Prompts.Remove(prompt!);
             await _context.SaveChangesAsync();
 
             return Ok();

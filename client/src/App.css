@@ -1,8 +1,9 @@
 @import "tailwindcss";
+@plugin "daisyui";
 @theme {
-  --color-primary: #042A2B;
-  --color-secondary:#54F2F2;
-  --color-tertiary: #F4E04D;
+  --color-primary-color: #042A2B;
+  --color-secondary-color:#54F2F2;
+  --color-tertiary-color: #F4E04D;
 }
 body{
     background-color: #042A2B;
