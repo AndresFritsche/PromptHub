@@ -12,8 +12,6 @@ namespace PromptHub.Controllers
         public AuthController(PromptHubContext context)
         {
             _context = context;
-        }
-        [HttpPost("register")]
-        
+        } 
     }
 }
