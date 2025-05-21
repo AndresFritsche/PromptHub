@@ -1,12 +1,15 @@
+import AboutSection from "./AboutSection";
+
 const HomePage = () => {
   return (
     <>
       <main className="flex flex-col justify-center items-center h-screen pb-[220px] ">
         {/* Blobs Background */}
-        <div className="absolute top-40 left-34 w-72 h-72 bg-teal-400 rounded-full blur-3xl blob-animation"></div>
-        <div className="absolute bottom-20 right-10 w-74 h-80 bg-indigo-400 rounded-full blur-3xl blob-animation"></div>
-        <div className="absolute top-40 right-94 w-64 h-64 bg-emerald-200 rounded-full blur-3xl blob-animation"></div>
+        <div className="absolute top-40 left-34 w-72 h-72 bg-teal-400 rounded-full blur-3xl blob-animation opacity-70 "></div>
+        <div className="absolute bottom-20 right-10 w-74 h-80 bg-tertiary-color rounded-full blur-3xl blob-animation opacity-50"></div>
+        <div className="absolute top-40 right-94 w-64 h-64 bg-emerald-200 rounded-full blur-3xl blob-animation opacity-70"></div>
 
+        {/* Hero Section */}
         <h1 className="text-white font-bold text-8xl text-center  md:w-1/2 my-8">
           Discover and Share{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-tertiary-color text-shadow-lg ">
@@ -40,6 +43,7 @@ const HomePage = () => {
           </div>
         </div>
       </main>
+      <AboutSection/>
     </>
   );
 };
