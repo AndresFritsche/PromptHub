@@ -8,7 +8,6 @@ const PromptsPage = () => {
   return (
     <>
       <Navbar />
-
       <FetchPrompts />
       <Footer />
     </>
