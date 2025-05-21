@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { RiDoubleQuotesL } from "react-icons/ri";
 
 type PromptProps = {
+  id: number;
   title: string;
   content: string;
   tag: string;
@@ -29,21 +30,21 @@ const FetchPrompts = () => {
   }, []);
 
   return (
-    <section className="grid grid-cols p-20 m-20 gap-6 w-1/2 mx-auto">
+    <section className="grid grid-cols-2 p-20 m-20 gap-6 w-1/2 mx-auto">
       
-      {prompts.map((prompt, index) => (
+      {prompts.map(({id, title, content, tag}) => (
         <div
-          key={index}
+          key={id}
           className="bg-white max-w-xl rounded-2xl shadow-lg border border-gray-200 p-12 mx-auto hover:shadow-xl transition-shadow duration-300"
         >
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
-            {prompt.title}
+            {title}
           </h1>
           <span>
             <RiDoubleQuotesL size={52}/>
           </span>
-          <p className="text-lg text-gray-600">'{prompt.content}'</p>
-          <p className="text-sm text-gray-400 pt-8 ">#{prompt.tag}</p>
+          <p className="text-lg text-gray-600">'{content}'</p>
+          <p className="text-sm text-gray-400 pt-8 ">#{tag}</p>
         </div>
       ))}
     </section>
