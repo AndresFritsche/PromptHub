@@ -1,5 +1,6 @@
 import AboutSection from "./AboutSection";
 
+
 const HomePage = () => {
   return (
     <>
@@ -44,6 +45,7 @@ const HomePage = () => {
             <p>Categories</p>
           </div>
         </div>
+  
       </main>
       <AboutSection/>
     </>
