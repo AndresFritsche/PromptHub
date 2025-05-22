@@ -5,14 +5,16 @@ const HomePage = () => {
     <>
       <main className="flex flex-col justify-center items-center h-screen pb-[220px] ">
         {/* Blobs Background */}
-        <div className="absolute top-40 left-34 w-72 h-72 bg-teal-400 rounded-full blur-3xl blob-animation opacity-70 "></div>
+        <div className="absolute top-46 left-34 w-72 h-72 bg-teal-400 rounded-full blur-3xl blob-animation opacity-70 "></div>
         <div className="absolute bottom-20 right-10 w-74 h-80 bg-tertiary-color rounded-full blur-3xl blob-animation opacity-50"></div>
-        <div className="absolute top-40 right-94 w-64 h-64 bg-emerald-200 rounded-full blur-3xl blob-animation opacity-70"></div>
+        <div className="absolute top-40 right-54 w-64 h-64 bg-emerald-200 rounded-full blur-3xl blob-animation opacity-70"></div>
+
+          
 
         {/* Hero Section */}
         <h1 className="text-white font-bold text-8xl text-center  md:w-1/2 my-8">
           Discover and Share{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-200 to-tertiary-color text-shadow-lg ">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r  from-cyan-200 to-tertiary-color">
             AI Prompts
           </span>
         </h1>
@@ -22,7 +24,7 @@ const HomePage = () => {
         </p>
         <a
           href="/prompts"
-          className="text-white bg-gradient-to-r from-green-300 to-green-700 font-semibold p-3 border rounded-3xl transition duration-300 hover:opacity-80"
+          className="text-primary-color bg-gradient-to-r from-green-300 to-green-700 font-semibold p-3 border rounded-xl transition duration-300 opacity-60 hover:opacity-100"
         >
           Explore Prompts 
         </a>
