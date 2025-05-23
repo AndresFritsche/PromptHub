@@ -42,7 +42,7 @@ namespace PromptHub.Controllers
             {
                 Title = dto.Title,
                 Content = dto.Content,
-                Tag = dto.Tag
+                Category = dto.Category
             };
             _context.Prompts.Add(prompt);
             await _context.SaveChangesAsync();

@@ -30,7 +30,7 @@ const FetchPrompts = () => {
     _fetchPrompts();
   }, []);
 
-  const copyToClipboard = async (content: string, id: number) => {
+  const copyToClipboard = (content: string, id: number) => {
     navigator.clipboard.writeText(content).then(() => {
       setCopiedId(id);
       setTimeout(() => setCopiedId(null), 2000);
