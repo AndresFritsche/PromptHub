@@ -10,5 +10,7 @@ namespace PromptHub.Data
         public DbSet<Prompt> Prompts { get; set; }
 
         public DbSet<Users> Users { get; set; }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
