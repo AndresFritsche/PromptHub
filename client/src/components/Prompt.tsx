@@ -6,7 +6,7 @@ type PromptProps = {
   id: number;
   title: string;
   content: string;
-  tag: string;
+  category: string;
 };
 
 const FetchPrompts = () => {
@@ -39,7 +39,7 @@ const FetchPrompts = () => {
 
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 gap-6 px-6 py-10 max-w-6xl mx-auto">
-      {prompts.map(({ id, title, content, tag }) => (
+      {prompts.map(({ id, title, content, category }) => (
         <div
           key={id}
           className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-xl transition-shadow duration-300"
@@ -58,14 +58,14 @@ const FetchPrompts = () => {
               className="cursor-pointer text-gray-500 hover:text-gray-700 transition-colors flex items-center gap-2"
               onClick={() => copyToClipboard(content, id)}
             >
-              <FaRegCopy size={24} />
+              <FaRegCopy size={34} />
               {copiedId === id && (
                 <span className="text-sm text-green-600">Copied!</span>
               )}
             </button>
           </div>
 
-          <p className="text-sm text-gray-400 pt-6">#{tag}</p>
+          <p className="text-sm text-gray-400 pt-6">#{category}</p>
         </div>
       ))}
     </section>
