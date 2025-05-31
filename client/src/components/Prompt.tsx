@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaRegCopy } from "react-icons/fa";
 import { RiDoubleQuotesL } from "react-icons/ri";
+import { supabase } from "../../config/supabase-client";
 
 type PromptProps = {
   id: number;
@@ -13,21 +14,17 @@ const FetchPrompts = () => {
   const [prompts, setPrompts] = useState<PromptProps[]>([]);
   const [copiedId, setCopiedId] = useState<number | null>(null);
 
+  const getPrompts = async () => {
+    try {
+      const { data, error } = await supabase.from("prompt").select();
+      console.log(data, error);
+      setPrompts(data!);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   useEffect(() => {
-    const _fetchPrompts = async () => {
-      try {
-        const response = await fetch("https://localhost:7251/api/prompt");
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const prompts = await response.json();
-        setPrompts(prompts);
-      } catch (error) {
-        console.error("Failed to fetch prompts:", error);
-      }
-    };
-
-    _fetchPrompts();
+    getPrompts();
   }, []);
 
   const copyToClipboard = (content: string, id: number) => {
@@ -73,4 +70,3 @@ const FetchPrompts = () => {
 };
 
 export default FetchPrompts;
-
