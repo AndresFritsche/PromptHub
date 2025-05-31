@@ -32,14 +32,12 @@ const Navbar = () => {
         </div>
         {/* Secondary Links */}
         <div className="flex items-center space-x-6">
-          <a href="https://github.com/AndresFritsche/PromptHub">
+          <a 
+          target="_blank"
+          href="https://github.com/AndresFritsche/PromptHub">
             <FaGithub size={22} className="text-white" />
           </a>
-          <a href="https://github.com/AndresFritsche/PromptHub"
-          className="text-white hover:text-green-800 hover:bg-white rounded-lg px-3 py-1 font-semibold"
-          >
-            Sign In
-          </a>
+
           <a href="/register"
           className="text-white hover:text-green-800 hover:bg-white rounded-lg px-3 py-1 font-semibold"
           >
