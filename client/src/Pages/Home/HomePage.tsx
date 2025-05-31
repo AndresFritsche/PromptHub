@@ -1,5 +1,4 @@
 import AboutSection from "./AboutSection";
-import CategoriesSection from "./CategoriesSection";
 
 
 const HomePage = () => {
@@ -46,9 +45,9 @@ const HomePage = () => {
             <p>Categories</p>
           </div>
         </div>
+  
       </main>
-      <AboutSection />
-      <CategoriesSection />
+      <AboutSection/>
     </>
   );
 };
