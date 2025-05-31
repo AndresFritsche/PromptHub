@@ -3,11 +3,11 @@ import { useForm, type SubmitHandler } from "react-hook-form";
 import { z } from 'zod'
 
 const schema = z.object({
-  userName: z.string().min(1, 'User Name is required'),
   firstName: z.string().min(1, 'Name is required'),
   lastName:z.string().min(1, 'Last name is required'),
-  emailAddress: z.string().email(),
+  email: z.string().email(),
   password: z.string().min(12),
+
 })
 
 type FormProps = z.infer<typeof schema>
@@ -22,26 +22,8 @@ const Register = () => {
   });
 
   const onSubmit: SubmitHandler<FormProps> = async (data) => {
-try {
-    const response = await fetch(`${import.meta.env.VITE_API_BASE_URL}/auth/register`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (!response.ok) {
-      const errorData = await response.text();
-      console.error("Registration failed:", errorData);
-      return;
-    }
-
-    const result = await response.json();
-    console.log("User registered successfully:", result);
-  } catch (error) {
-    console.error("Network error:", error);
-  }
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    console.log(data);
   };
 
   return (
@@ -53,21 +35,6 @@ try {
         <h1 className="w-full flex justify-center text-4xl font-bold">
           Register!
         </h1>
-        <div>
-          <label
-            htmlFor="userName"
-            className="block text-xl font-semibold mb-2"
-          >
-            User Name
-          </label>
-          <input
-            {...register("userName", { required: true })}
-            id="userName"
-            type="text"
-            placeholder="Enter your first name"
-            className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
-          />
-        </div>
         <div>
           <label
             htmlFor="firstName"
@@ -100,16 +67,16 @@ try {
           />
         </div>
 
-        {errors.emailAddress && (
-          <div className="text-red-500">{errors.emailAddress.message}</div>
+        {errors.email && (
+          <div className="text-red-500">{errors.email.message}</div>
         )}
         <div>
           <label htmlFor="email" className="block text-xl font-semibold mb-2">
             Email
           </label>
           <input
-            {...register("emailAddress")}
-            id="emailAddress"
+            {...register("email")}
+            id="email"
             type="email"
             placeholder="Enter your email"
             className="w-full px-4 py-2 rounded-lg bg-white/20 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white"
